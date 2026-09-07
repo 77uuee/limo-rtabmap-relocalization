@@ -1,0 +1,56 @@
+# This repository tracks the measurement tooling, the launch files, the
+# recorded results, and the figures referenced by the README. Session
+# debugging screenshots and vendor material are excluded by the allowlist.
+
+# --- exclude everything by default ---
+*
+!*/
+
+# --- always keep ---
+!.gitignore
+!README.md
+!measurement_plan.md
+!demo_commands.md
+
+# --- launch files (camera-only RTAB-Map variants) ---
+!camera_only/*.launch.py
+
+# --- measurement tooling and recorded data ---
+!tools/*.py
+!tools/*.sh
+!tools/*.csv
+!tools/report_table.md
+!tools/report_map.png
+
+# --- maps used for the experiment ---
+!rtab_camera_v2_2.pgm
+!rtab_camera_v2_2.yaml
+!rtab_camera_nav.pgm
+!rtab_camera_nav.yaml
+!rtab_camera_nav.png
+
+# --- figures referenced by the README ---
+!measurement_points_v2_1map.png
+!map_v2_2_full.png
+!p1_view_c1_0902.jpg
+!p2_view_c1_fail.jpg
+!c3_p1_view_0902.jpg
+
+# --- deliverable slides (own work) ---
+!slides/rtabmap-reliability-ku.pdf
+
+# --- never track ---
+# large binary map databases (*.db), vendor manual PDFs, extracted zips
+*.db
+*.zip
+*.pptx
+.DS_Store
+._*
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.claude/
+.env
+*.pem
+*.key
